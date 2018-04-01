@@ -24,7 +24,6 @@ Create Table SALESTXN(
 	productid		NUMERIC(8),
 	qtysold			NUMERIC(4),
 	saleprice		DECIMAL(6,2),
-	Primary Key (txnid),
 	CONSTRAINT PK_SALESTXN PRIMARY KEY (txnid),
 	FOREIGN KEY (productid) REFERENCES PRODUCT,
 	CONSTRAINT CHK_SALESTXN_saleprice
