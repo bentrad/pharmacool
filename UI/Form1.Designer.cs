@@ -60,6 +60,7 @@
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
+            this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
             this.materialTabControl1.SuspendLayout();
             this.viewTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -81,6 +82,7 @@
             // 
             // viewTab
             // 
+            this.viewTab.Controls.Add(this.materialLabel11);
             this.viewTab.Controls.Add(this.listView);
             this.viewTab.Controls.Add(this.dataGridView1);
             this.viewTab.Location = new System.Drawing.Point(8, 39);
@@ -433,6 +435,19 @@
             this.materialTabSelector1.TabIndex = 1;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
+            // materialLabel11
+            // 
+            this.materialLabel11.AutoSize = true;
+            this.materialLabel11.Depth = 0;
+            this.materialLabel11.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel11.Location = new System.Drawing.Point(407, 301);
+            this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel11.Name = "materialLabel11";
+            this.materialLabel11.Size = new System.Drawing.Size(231, 37);
+            this.materialLabel11.TabIndex = 2;
+            this.materialLabel11.Text = "materialLabel11";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -446,6 +461,7 @@
             this.Text = "PharmaCool";
             this.materialTabControl1.ResumeLayout(false);
             this.viewTab.ResumeLayout(false);
+            this.viewTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.editTab.ResumeLayout(false);
             this.editTab.PerformLayout();
@@ -488,6 +504,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private System.Windows.Forms.TextBox textBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel11;
     }
 }
 
