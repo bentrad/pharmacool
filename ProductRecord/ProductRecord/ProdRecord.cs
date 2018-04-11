@@ -17,7 +17,7 @@ public class ProdRecord
     private string _id;
     private List<string> _tags;
     private double _cost;
-        //
+    
     //Constructor (if required)
     public ProdRecord()
     {
@@ -49,8 +49,9 @@ public class ProdRecord
         //Query will be executed and data is saved to database
         MyReader = myCommand.ExecuteReader(); 
         while (MyReader.Read())
+        */
     }
-    */
+    
 //Removes a record
 public void RemoveRecord() {
         /*
@@ -92,6 +93,11 @@ public void RemoveRecord() {
         public void EditTags() { }
         public void EditCost() { }
 
+
+        public void RetrieveData()
+        {
+
+        }
         /*
 
         Display Data
