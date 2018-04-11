@@ -19,10 +19,14 @@ public class ProdRecord
     private double _cost;
     
     //Constructor (if required)
-    public ProdRecord()
+    public ProdRecord(int quantity, string name, string id, double cost)
     {
-
-    }
+            _quantity = quantity;
+            _name = name;
+            _id = id;
+            //_tags;
+            _cost = cost;
+        }
 
     //Functions
     //Just set up for now, may not return a value in the future
@@ -93,11 +97,6 @@ public void RemoveRecord() {
         public void EditTags() { }
         public void EditCost() { }
 
-
-        public void RetrieveData()
-        {
-
-        }
         /*
 
         Display Data
