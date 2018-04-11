@@ -18,5 +18,14 @@ namespace PharmaCool
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'pcdbDataSet.SALES' table. You can move, or remove it, as needed.
+            this.sALESTableAdapter.Fill(this.pcdbDataSet.SALES);
+            // TODO: This line of code loads data into the 'pcdbDataSet.PRODUCTS' table. You can move, or remove it, as needed.
+            this.pRODUCTSTableAdapter.Fill(this.pcdbDataSet.PRODUCTS);
+
+        }
     }
 }
