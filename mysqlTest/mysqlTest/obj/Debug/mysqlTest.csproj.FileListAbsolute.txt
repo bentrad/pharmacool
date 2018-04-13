@@ -34,3 +34,5 @@ c:\users\luke\Desktop\mysqlTest\mysqlTest\bin\Debug\Xamarin.Forms.Xaml.pdb
 c:\users\luke\Desktop\mysqlTest\mysqlTest\bin\Debug\Xamarin.Forms.Xaml.xml
 c:\users\luke\Desktop\mysqlTest\mysqlTest\obj\Debug\mysqlTest.exe
 c:\users\luke\Desktop\mysqlTest\mysqlTest\obj\Debug\mysqlTest.pdb
+C:\Users\luke\Desktop\mysqlTest\mysqlTest\obj\Debug\mysqlTest.csproj.CoreCompileInputs.cache
+C:\Users\luke\Desktop\mysqlTest\mysqlTest\obj\Debug\mysqlTest.csproj.CopyComplete

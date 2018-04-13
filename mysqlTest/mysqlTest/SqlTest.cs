@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,103 +16,117 @@ namespace mysqlTest
     public partial class SqlTest : Form
     {
 
-        static void Main(string[] args)
-        {
-            /* my first program in C# */
+        //static void Main(string[] args)
+        //{
+        //    /* my first program in C# */
 
-            Application.Run(new SqlTest());
+        //    Application.Run(new SqlTest());
 
-            Console.WriteLine("Hello World");
-            Console.ReadKey();
-        }
+        //    Console.WriteLine("Hello World");
+        //    Console.ReadKey();
+        //}
 
         // "Server=localhost;Database=testdb;Uid=root;Pwd=YES;";
 
         //Azure server: pharmacool.database.windows.net ; Database: pcdb ; User: pharma ; password: pinapplepizza1!
-        string MyConnectionString = "Server=pharmacool.database.windows.net;Database=pcdb;Uid=pharma;Pwd=pineapplepizza1!;";
+        string myConnectionString = "Server= pharmacool.database.windows.net;Database=pcdb;Uid=pharma@pharmacool;Pwd=pineapplepizza1!;";
 
         public SqlTest()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
+            int pStock;
+            float pCost;
+            string cost = txtCost.Text;
+            string stock = txtStock.Text;
+            float.TryParse(cost, out pCost);
+            int.TryParse(stock, out pStock);
+            //MySqlConnection connection = new MySqlConnection(myConnectionString);
 
-
-
-            /*private*/
-            //void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-            //{
-
-            //}
-
-            //private void SqlTest_Load(object sender, EventArgs e)
-            //{
-            //}
-
-
-            private void LoadData()
+            MySqlCommand cmd;
+            //connection.Open();
+            try
             {
-                MySqlConnection connection = new MySqlConnection(MyConnectionString);
-                connection.Open();
-                try
-                {
-                    MySqlCommand cmd = connection.CreateCommand();
-                    cmd.CommandText = "SELECT * FROM phonebook";
-                    MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-                    adap.Fill(ds);
 
-                    dataGridView1.DataSource = ds.Tables[0].DefaultView;
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-                finally
-                {
-                    if (connection.State == ConnectionState.Open)
-                    {
-                        connection.Close();
-                    }
-                }
+                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+                builder.DataSource = "pharmacool.database.windows.net"; //ERROR:Server Name cannot be found
+                builder.UserID = "pharma@pharmacool";
+                builder.Password = "pineapplepizza1!";
+                builder.InitialCatalog = "pcdb";
+                MySqlConnection connection = new MySqlConnection(builder.ConnectionString);
+
+                Console.WriteLine("\nQuery data\n");
+                Console.WriteLine(builder.ConnectionString);
+
+                connection.Open();
+                cmd = connection.CreateCommand();
+                cmd.CommandText = "INSERT INTO phonebook(productid, pname, pcost, pstock)VALUES(@productid, @pname, @pcost, @pstock)";
+                cmd.Parameters.AddWithValue("@productid", int.Parse(txtId.Text));
+                cmd.Parameters.AddWithValue("@pname", txtName.Text);
+                cmd.Parameters.AddWithValue("@pcost", pCost);
+                cmd.Parameters.AddWithValue("@pstock", pStock);
+                cmd.ExecuteNonQuery();
+                
             }
-
-            private void button1_Click(object sender, EventArgs e)
+            catch (Exception)
             {
-                int MobileNo;
-                string Mobile = txtMobile.Text;
-                int.TryParse(Mobile, out MobileNo);
+                throw;
+            }
+            //finally
+            //{
 
-                MySqlConnection connection = new MySqlConnection(MyConnectionString);
-                MySqlCommand cmd;
-                connection.Open();
-                try
-                {
-                    cmd = connection.CreateCommand();
-                    cmd.CommandText = "INSERT INTO phonebook(Id,Name, MobileNo)VALUES(@Id,@Name,@MobileNo)";
-                    cmd.Parameters.AddWithValue("@Id", int.Parse(txtId.Text)); //TODO: add ID and Name(Maybe add via windows Forms?)
-                    cmd.Parameters.AddWithValue("@Name", txtName.Text);
-                    cmd.Parameters.AddWithValue("@MobileNo", Mobile);
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-                finally
-                {
+            //    if (connection.State == ConnectionState.Open)
+            //    {
+            //        connection.Close();
+            //        LoadData();
+            //    }
 
-                    if (connection.State == ConnectionState.Open)
-                    {
-                        connection.Close();
-                        LoadData();
-                    }
+            //}
+        }
+        private void LoadData()
+        {
+            MySqlConnection connection = new MySqlConnection(myConnectionString);
+            connection.Open();
+            try
+            {
+                MySqlCommand cmd = connection.CreateCommand();
+                cmd.CommandText = "SELECT * FROM phonebook";
+                MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adap.Fill(ds);
 
+                dataGridView1.DataSource = ds.Tables[0].DefaultView;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
                 }
             }
         }
 
+        private void SqlTest_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
