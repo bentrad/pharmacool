@@ -46,56 +46,64 @@ namespace mysqlTest
             float.TryParse(cost, out pCost);
             int.TryParse(stock, out pStock);
             //MySqlConnection connection = new MySqlConnection(myConnectionString);
+            SqlConnectionStringBuilder builder;
+            SqlConnection connection;
+            SqlCommand cmd;
 
-            MySqlCommand cmd;
             //connection.Open();
+
+            builder = new SqlConnectionStringBuilder();
+            builder.DataSource = "pharmacool.database.windows.net"; //ERROR:Server Name cannot be found
+            builder.UserID = "pharma@pharmacool";
+            builder.Password = "pineapplepizza1!";
+            builder.InitialCatalog = "pcdb";
+
+            connection = new SqlConnection(builder.ConnectionString);
+            
+            Console.WriteLine("\nQuery data example:");
+            Console.WriteLine(builder.ConnectionString);
+            Console.WriteLine("=========================================\n");
+
+            connection.Open();
+
             try
             {
 
-                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "pharmacool.database.windows.net"; //ERROR:Server Name cannot be found
-                builder.UserID = "pharma@pharmacool";
-                builder.Password = "pineapplepizza1!";
-                builder.InitialCatalog = "pcdb";
-                MySqlConnection connection = new MySqlConnection(builder.ConnectionString);
+                //    //MySqlConnection connection = new MySqlConnection(builder.ConnectionString);
 
-                Console.WriteLine("\nQuery data\n");
-                Console.WriteLine(builder.ConnectionString);
-
-                connection.Open();
+                //    connection.Open();
                 cmd = connection.CreateCommand();
-                cmd.CommandText = "INSERT INTO phonebook(productid, pname, pcost, pstock)VALUES(@productid, @pname, @pcost, @pstock)";
+                cmd.CommandText = "INSERT INTO PRODUCTS(pname, pcost, pstock)VALUES(@pname, @pcost, @pstock)";
                 cmd.Parameters.AddWithValue("@productid", int.Parse(txtId.Text));
                 cmd.Parameters.AddWithValue("@pname", txtName.Text);
                 cmd.Parameters.AddWithValue("@pcost", pCost);
                 cmd.Parameters.AddWithValue("@pstock", pStock);
                 cmd.ExecuteNonQuery();
-                
             }
             catch (Exception)
             {
                 throw;
             }
-            //finally
-            //{
+            finally
+            {
 
-            //    if (connection.State == ConnectionState.Open)
-            //    {
-            //        connection.Close();
-            //        LoadData();
-            //    }
-
-            //}
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                    LoadData();
+                }
+            }
         }
+
         private void LoadData()
         {
-            MySqlConnection connection = new MySqlConnection(myConnectionString);
+            SqlConnection connection = new SqlConnection(myConnectionString);
             connection.Open();
             try
             {
-                MySqlCommand cmd = connection.CreateCommand();
-                cmd.CommandText = "SELECT * FROM phonebook";
-                MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
+                SqlCommand cmd = connection.CreateCommand();
+                cmd.CommandText = "SELECT * FROM PRODUCTS";
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 adap.Fill(ds);
 

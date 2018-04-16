@@ -65,11 +65,11 @@
             // txtName
             // 
             this.txtName.AccessibleName = "txtName";
-            this.txtName.Location = new System.Drawing.Point(77, 109);
+            this.txtName.Location = new System.Drawing.Point(77, 57);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 2;
-            this.txtName.Text = "200";
+            this.txtName.Text = "orange";
             // 
             // txtCost
             // 
@@ -83,11 +83,11 @@
             // txtStock
             // 
             this.txtStock.AccessibleName = "pstock";
-            this.txtStock.Location = new System.Drawing.Point(77, 57);
+            this.txtStock.Location = new System.Drawing.Point(77, 113);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(100, 20);
             this.txtStock.TabIndex = 4;
-            this.txtStock.Text = "banana";
+            this.txtStock.Text = "400";
             // 
             // label1
             // 
