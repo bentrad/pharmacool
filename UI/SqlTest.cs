@@ -2,36 +2,42 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using MaterialSkin;
-using MaterialSkin.Controls;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
-namespace PharmaCool
+
+namespace mysqlTest
 {
-
-    public partial class Form1 : MaterialForm
+    public partial class SqlTest : Form
     {
+
+        //static void Main(string[] args)
+        //{
+        //    /* my first program in C# */
+
+        //    Application.Run(new SqlTest());
+
+        //    Console.WriteLine("Hello World");
+        //    Console.ReadKey();
+        //}
+
+        // "Server=localhost;Database=testdb;Uid=root;Pwd=YES;";
+
+        //Azure server: pharmacool.database.windows.net ; Database: pcdb ; User: pharma ; password: pinapplepizza1!
         string myConnectionString = "Server= pharmacool.database.windows.net;Database=pcdb;Uid=pharma@pharmacool;Pwd=pineapplepizza1!;";
-        public Form1()
+
+        public SqlTest()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'pcdbDataSet.SALES' table. You can move, or remove it, as needed.
-            this.sALESTableAdapter.Fill(this.pcdbDataSet.SALES);
-            // TODO: This line of code loads data into the 'pcdbDataSet.PRODUCTS' table. You can move, or remove it, as needed.
-            this.pRODUCTSTableAdapter.Fill(this.pcdbDataSet.PRODUCTS);
 
-        }
-
-        private void addButton_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             int pStock;
             float pCost;
@@ -53,7 +59,7 @@ namespace PharmaCool
             builder.InitialCatalog = "pcdb";
 
             connection = new SqlConnection(builder.ConnectionString);
-
+            
             Console.WriteLine("\nQuery data example:");
             Console.WriteLine(builder.ConnectionString);
             Console.WriteLine("=========================================\n");
@@ -101,7 +107,7 @@ namespace PharmaCool
                 DataSet ds = new DataSet();
                 adap.Fill(ds);
 
-                dataGridView.DataSource = ds.Tables[0].DefaultView;
+                dataGridView1.DataSource = ds.Tables[0].DefaultView;
             }
             catch (Exception)
             {
@@ -114,6 +120,21 @@ namespace PharmaCool
                     connection.Close();
                 }
             }
+        }
+
+        private void SqlTest_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
