@@ -1,0 +1,457 @@
+STAND-UPS ARCHIVE
+
+SPRINT ONE STAND-UPS
+
+DAY 2 (30/03):
+  Simon
+    What I have done: 
+      - Drafted SQL database Scheme
+      - I have written the SQL Table creation code
+      - Researched MySQL Configuration
+    What I will do Today:
+      -  up a MySQL Instance
+      - Work with Luke to configure connection with MySQL
+      - Work with Team to configure Repository to hold Winforms, C#, MySQL
+    Any Blockers: 
+     - No Blockers
+
+  Lam
+    What I have done:
+      - Research on Windows Forms 
+      - Created a simple UI for PharmaCool
+    What I will do today:
+      - Combine codes from other team members to my UI
+      - Connect mySQL database to UI
+    Blocker:
+      - No blocker (edited)
+
+  Ben Trad
+    What I have done: 
+      - Setup repo and Trello
+    What I will do Today:
+      - Research methods on how to connect a database to GitHub that we can all use openly.
+    Any Blockers?
+      - GitHub repository has been setup but nothing is on there yet.
+
+Bradley Chick
+  What I have done:
+    - Created a mock draft on how the backend will interact with the database
+    - Helped complete task 5.1 and 5.2
+    - I have set up an abstract ProductRecord class for the backend
+  What will i do today?:
+  - I will continue to expand upon the backend by adding onto the ProductRecord. I will add new functions to add to the database.
+  - Do a UML diagram of the backend
+  Any blockers?:
+  - GitHub repository is not fully functional. All components are not yet able to be connected.
+  - Cannot install an extension to use mySQL with C#.
+
+  Luke
+    What I have done: 
+      - I have researched how to connect the C# to SQL. Using mySql libraries from Visual Studio 2017 XAMPP and phpmyadmin I was able to connect the C# input from the user to the mySQL. Having trouble with connecting the C# backend code to the winforms
+    What I will do Today:
+      - I will work on linking a database connected to Github. Also making sure WinForms is working locally with my C# connection.
+    Any Blockers?
+      - Team has not set up Github repo or methodology in how to upload to be.
+
+DAY 3 (02/04):
+  Simon
+    What I have done: 
+      - Configured VS to GitHub repo
+      - Configured and tested Google Cloud SQL DB instance.
+      - Attempted to connect VS to Google Cloud SQL instance.
+    What I will do Today:
+      - Configure Azure SQL instance
+      - Connect SQL Instance with VS
+      - Prove .SQL files functioning on SQL DB
+    Any Blockers: 
+      - Google Cloud - VS connection proving difficult. Attempting to resolve by using Azure SQL instance. (edited)
+
+  Lam 
+    What I have done:
+      - Made a simple UI with Windows Forms basic theme
+    What I will do today:
+      - Researched on Windows Forms UI libraries
+      - Drew and sketched UI prototypes
+    Any blockers:
+      - Installation of libraries
+      - New UI libraries to get used to
+
+  Luke
+    What I have done:
+      - CREATED connection between back end and myself.
+    What I will do today: 
+      - fix problem with Github VS connection. Fix problem with signing into test myself connection.
+    Blockers:
+      - Github VS can't clone code
+      - Can't sign into myself database via back end
+
+  Ben Trad
+    What have I done:
+      - Looked into methods on how to connect a database to GitHub. 
+    What I will do today:
+      - Research the integration between GitHub and the code, to determine where the database fits in.
+    Blockers:
+      - Trouble setting up local connection between GitHub and VisualStudio
+
+  Bradley Chick
+    What I have done:
+      - Research how yo interact with databases with c#
+      - Expanded upon the record class - allowing the editing and deletion of database items
+    What I will do today:
+      - Create UML diagram of back end
+      - Continue to research database interactions
+      - Continue to expand upon the record class
+    Blockers:
+      - Database component not downloading on my device
+
+
+DAY 4 (03/04):
+  Simon
+    What I have done: 
+      - Redesigned SQL database Schema
+      - Rewritten the SQL Table creation code
+      - Configured, tested and proved Azure SQL DB instance.
+      - Merged all code with Master branch
+    What I will do Today:
+      - Assist the team with connection to SQL instance
+      - Draft SQL UML Schema
+    Any Blockers: 
+      - No Blockers
+
+
+  Lam 
+    What I have done: 
+      - Installed MaterialSkin add on to VS
+      - Convert old UI to MaterialSkin
+      - Watch tutorials on MaterialSkin
+    What I will do Today:
+      - Add tabs to UI
+    Any Blockers:
+      - No Blockers
+
+  Ben Trad
+    What I have done:
+      - Finalised research on how to connect GitHub and the code.
+    What I will do Today:
+      - Compile sprint#1 paperwork
+    Any Blockers:
+      - No blockers
+
+  Luke
+    What I have done:
+      - Connected to SQL database created by Simon.
+      - Started creating connection based on these databases.
+      - Made admin of portal.azure.com pharamcool database
+      - Connected VS with pharmacool git account
+    What I will do Today:
+      - Finish connection with databases from backend.
+      - Commit current code to git
+    Any Blockers:
+      - No Blockers
+      - Unable to push code to git
+
+  Bradley Chick
+    What I have done:
+      - Completed UML diagram
+    What I will do today:
+      - Finalize 
+      - Continue research into connecting to databases through c#
+      - Create requirements for product record class to be successfully tested
+    Any blockers:
+      - Components not downloading successfully through VS
+
+DAY 5 (04/04):
+  Simon
+    What I have done: 
+      - Configured and tested Azure SQL Instance
+      - Set up all Team Members as Admin users on Azure
+      - Assisted Ben and Luke with Connecting to SQL DB
+      - Assisted Luke with Git Merging
+    What I will do Today:
+      - Draw Database UML diagram
+    Any Blockers: 
+      - No Blockers
+
+  Ben Trad
+    What I have done:
+      - Set up Azure and Git on visual studio.
+      - Organised sprint paperwork.
+    What I will do today:
+      - Begin planning Sprint 1 Week 2
+    Any blockers:
+      - No blockers
+
+  Lam
+    What I have done: 
+      - Added tabs to UI
+    What I will do Today:
+      - Make new sketches based on new UI
+    Any Blockers: 
+      - No Blockers
+
+  Bradley Chick
+    What I have done:
+      - Research into connecting databse to C#
+      - Created requirements for product record tasks
+    What I will do today:
+      - Research into how to use Azure
+      - Research into how to use Git
+    Any Blockers:
+      - None
+
+  Luke
+    What I have done: 
+      - Fixed problem with guthub connection to my visual Studio
+      - Fixed bugs with connection code
+    What I will do today: 
+      - Merge test code with git code
+      - Connected to database through Simons SQL.
+    Blockers: 
+      - Backend code uploaded to github
+      - UI code needs to also be uploaded
+
+DAY 6 (10/04):
+  Simon
+    What I have done: 
+      - Created the DB UML diagram
+      - Updated DB Wiki
+    What I will do Today(Day6):
+      - Participate in Week 2 Sprint Planning
+    Any Blockers: 
+      - No Blockers
+
+  Lam
+    What I have done: 
+      - Made new sketches for new UI
+      - Updated UI with entries, buttons and data grid view
+    What I will do Today:
+      - Participate in Week 2 Sprint Planning
+    Any Blockers: 
+      - No blocker
+
+  Bradley Chick
+   What I have done:
+    - Research into how to use
+    - Research into how to use git
+  What I will do:
+    - Connect Visual Studio to Git Repository
+    - Upload Product Record to Git Repository
+  Any blockers:
+    - Work is dependant on Luke's work being completed
+    - Work is dependant on Lam's work being completed
+
+  Ben Trad
+    What I have done:
+      - Finalised and submitted Sprint 1 - week 1 paperwork. 
+      - Discussed/planned Sprint 1 - week 2
+    What I will do:
+      - Assist the team in any parts of sprint 1 - week 2 that require extra work.
+      - Begin planning the documents for the end of sprint 1 (week 7 tasks)
+    Any blockers:
+      - none
+
+  Luke
+    What I have done: 
+      - Fixed problem with connection to azure database
+      - Fixed more bugs with connection code and improved look of code
+    What I will do today: 
+      - Help members connect with Github and Azure connection via Visual Studio
+      - Research problems for database connection and fix accordingly
+    Blockers: 
+      - Some places where I work block me from sending data to the database
+
+DAY 7 (11/04):
+  Bradley Chick
+    What I have done:
+      - Connect Visual Studio to Git Repository 
+      - Upload Product Record to Gut Repository
+    What I will do:
+      - Attempts to connect Azure to Visual Studio
+      - Update variable names in ProdRecord
+      - Add a constructor to ProdRecord
+    Any blockers:
+      - Work is dependant on Luke's work being completed
+      - Work is dependant on Lam's work being completed 
+      - Struggling to connect to Azure
+
+  Ben Trad
+    What I have done:
+    - Paperwork for Sprint 1
+    What I will do:
+    - Confirm workflow for Sprint 1 - week 2
+    - Further develop paper work for  Sprint 1
+    - Assist group members in any tasks that require help.
+    Any blockers:
+    - no blockers
+
+  Luke Gavin
+    What I have done:
+      - Updated database connection code
+      - Helped members connect to git repo and pcdb Azure database
+    What I will do:
+      - Recreate connection code to connect to new Azure database to match pcdb database
+    Any blockers:
+      - Unable to connect to database using current project. Error due to server name issue
+        (refere to github Issues)
+      - Possible problems with pcdb database
+
+  Simon
+    What I have done: 
+      - Week 2 Sprint Planning
+    What I will do Today:
+     - Code Review of SQL Connection
+    Any Blockers: 
+      - No Blockers
+
+  Lam
+    What I have done: 
+      - Week 2 Sprint Planning
+    What I will do Today:
+      - Connect Database to DataGridView
+    Any Blockers: 
+      - No Blockers
+
+DAY 8 (13/04):
+  Simon
+    What I have done: 
+      - Reviewed and Tested SQL Connection Code
+      - Currently failing to connect, potentially due to MySQL Connection String vs SqlConnection String 
+    What I will do Today:
+      - Attempt alternate string connection method (SqlConnection) in attempt to resolve SQL connection issue.
+    Any Blockers: 
+      - No Blockers
+
+  Luke
+    What I have done: 
+      - Reviewed SQL connection code and Back end code
+      - Researched other methods of SQL connection and TCP configuration
+    What I will do Today:
+      - Fix connection code with new researched information
+    Any Blockers:
+      - none
+
+  Ben Trad
+    What I have done:
+      - Sprint 1 - Design paperwork
+      - Sprint 1 - Begun retrospective
+    What I will do today:
+      - Sprint 1 retrospective
+     Assist team in any areas that need help
+      - Any blockers:
+      - No blockers
+
+  Lam
+    What I have done:
+      - Connected Database to DataGridView
+    What I will do today:
+      - Update UI with accessible names
+    Any blockers:
+      - No blockers
+
+  Bradley Chick
+    What have I done:
+      - Attempt to connect Azure to Visual Studio
+      - Update variables names in ProdRecord
+      - Add a constructor to ProdRecord
+    What i will do:
+      - Reviewed previously made documents
+      - Assist team in any areas that need help
+    Any blockers:
+      - No Blockers
+
+DAY 9 (15/04):
+  Luke
+    What I have done: 
+      - Fixed SQL conncetion code 
+      - Improved basic UI for the code
+    What I will do Today:
+      - Look over backend code and see how to merge the two solutions.
+    Any Blockers:
+      - Possible unfinished backend code(will check with team members)
+
+  Ben Trad
+    What I have done:
+      - Sprint 1 - further work into retrospective
+    What I will do today:
+      - Sprint 1 - final check paperwork
+      - Sprint 1 - begin product review 
+      - Sprint 1 - begin process review 
+      - Assist team in any areas that need help
+    Any blockers:
+      - No blockers
+
+  Lam
+    What I have done:
+     - Updated UI with accessible names
+    What I will do today:
+     - Change the structure of tabs to View, Products and Sales
+    Any blockers:
+     - No blockers
+
+  Simon
+    What I have done: 
+     - Assisted Luke in resolving SQL DB Connection issue.
+     - Started code review: revised SQL Connection Method.
+    What I will do Today:
+     - Complete code review for revised SQL Connection Method
+     - DB Support with Connection of Controller and SQL Connector
+     - Sprint Review Activities
+    Any Blockers: 
+     - No Blockers
+
+  Bradley Chick
+    What I have done:
+      - Reviewed previously made documents
+      - Assist team in any areas that need help
+    What I will do:
+      - Review backend code
+      - Assist team in any areas where they would need help
+    Any blockers:
+      - No Blockers
+
+DAY 10 (17/04):
+  Luke
+    What I have done: 
+      - Reviewed backend code
+    What I will do Today:
+      - Connect the backend code with my Controller code.
+      - Discuss progress with productowner
+      - Help finish some documents(i.e. 7.2, 7.3 etc...)
+    Any Blockers:
+      - none (edited)
+
+  Ben Trad
+    What I have done:
+      - Completed sprint 1 paperwork (all)
+    What I will do today:
+      - Sprint 1 over!!!!!
+    Any blockers:
+      - no blockers
+
+  Bradley Chick
+    What I have done:
+      - Reviewed backend code
+      - Helped team in areas where they may need help
+    What I will do today:
+      - Help connect backend with the controller
+      - Help complete Sprint 1 documents (i.e. 7.1 - 7.5)
+    Any blockers:
+      - No blockers
+
+  Simon
+    What I have done: 
+      - Completed code review for revised SQL Connection 
+      - Sprint Retrospective Preparation
+    What I will do Today:
+      - Sprint Review Activities
+      - Retrospective
+    Any Blockers: 
+      - No Blockers
+
+  Lam
+    What I have done: 
+      - Changed structure of tabs to View, Products, Sales
+    What I will do Today:
+      - Attempt to combine work with Backend and Controller Programmer
+    Any Blockers:
+      - No blocker

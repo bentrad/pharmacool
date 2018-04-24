@@ -8,24 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
 
 
 namespace mysqlTest
 {
     public partial class SqlTest : Form
     {
-
-        //static void Main(string[] args)
-        //{
-        //    /* my first program in C# */
-
-        //    Application.Run(new SqlTest());
-
-        //    Console.WriteLine("Hello World");
-        //    Console.ReadKey();
-        //}
-
         // "Server=localhost;Database=testdb;Uid=root;Pwd=YES;";
 
         //Azure server: pharmacool.database.windows.net ; Database: pcdb ; User: pharma ; password: pinapplepizza1!

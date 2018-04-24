@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-//using MySql.Data;
+using System.Data;
+
 
 /*
  * https://www.c-sharpcorner.com/UploadFile/9582c9/insert-update-delete-display-data-in-mysql-using-C-Sharp/
- *
  * */
 
 
@@ -56,6 +56,10 @@ public class ProdRecord
         */
     }
     
+
+        //Edit Record Method
+
+
 //Removes a record
 public void RemoveRecord() {
         /*
@@ -91,6 +95,8 @@ public void RemoveRecord() {
         }  
         MyConn2.Close();//Connection closed here   
          */
+
+        //Just use Set and get properies for this
         public void EditQuantity() { }
         public void EditName() { }
         public void EditID() { }
