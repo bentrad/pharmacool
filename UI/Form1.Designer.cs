@@ -31,80 +31,79 @@
             this.components = new System.ComponentModel.Container();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.viewTab = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sALESBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.pcdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pcdbDataSet = new PharmaCool.pcdbDataSet();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.productsTab = new System.Windows.Forms.TabPage();
+            this.deleteButton = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.editButton = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.productStockTextBox = new System.Windows.Forms.TextBox();
+            this.productStockLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.productCostTextBox = new System.Windows.Forms.TextBox();
+            this.productCostLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.productNameTextBox = new System.Windows.Forms.TextBox();
+            this.productNameLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.productIdTextBox = new System.Windows.Forms.TextBox();
+            this.productIdLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
+            this.pcdbDataSet = new PharmaCool.pcdbDataSet();
+            this.pcdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pRODUCTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pRODUCTSTableAdapter = new PharmaCool.pcdbDataSetTableAdapters.PRODUCTSTableAdapter();
             this.productidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pcostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pstockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pRODUCTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productsTab = new System.Windows.Forms.TabPage();
-            this.deleteButton = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.editButton = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.txtStock = new System.Windows.Forms.TextBox();
-            this.productStockLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.txtCost = new System.Windows.Forms.TextBox();
-            this.productCostLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.productNameLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.productIdLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.productidDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pcostDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pstockDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pRODUCTSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.salesTab = new System.Windows.Forms.TabPage();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.txtEarned = new System.Windows.Forms.TextBox();
-            this.salesEarnedLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.txtSold = new System.Windows.Forms.TextBox();
-            this.quantitySoldLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.sProductIdTextBox = new System.Windows.Forms.TextBox();
-            this.sProductIdLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.txtDate = new System.Windows.Forms.TextBox();
-            this.saleDateLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.saleIdTextBox = new System.Windows.Forms.TextBox();
-            this.saleIdLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.saleidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.saledateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtysoldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salepriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sALESBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
-            this.pRODUCTSTableAdapter = new PharmaCool.pcdbDataSetTableAdapters.PRODUCTSTableAdapter();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sALESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sALESTableAdapter = new PharmaCool.pcdbDataSetTableAdapters.SALESTableAdapter();
             this.sALESBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fKSALESproductid02084FDABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sALESBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.addButton = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.salesTab = new System.Windows.Forms.TabPage();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.salePriceTextBox = new System.Windows.Forms.TextBox();
+            this.salePriceLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.quantitySoldTextBox = new System.Windows.Forms.TextBox();
+            this.quantitySoldLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.sProductIdTextBox = new System.Windows.Forms.TextBox();
+            this.sProductIdLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.saleDateTextBox = new System.Windows.Forms.TextBox();
+            this.saleDateLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.saleIdTextBox = new System.Windows.Forms.TextBox();
+            this.saleIdLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.sALESBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.saleidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saledateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtysoldDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salepriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRODUCTSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.productidDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pcostDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pstockDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sALESBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.materialTabControl1.SuspendLayout();
             this.viewTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcdbDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTSBindingSource)).BeginInit();
             this.productsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTSBindingSource1)).BeginInit();
-            this.salesTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcdbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcdbDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKSALESproductid02084FDABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource2)).BeginInit();
+            this.salesTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTSBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -132,41 +131,6 @@
             this.viewTab.Text = "VIEW";
             this.viewTab.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
-            this.dataGridView2.DataSource = this.sALESBindingSource4;
-            this.dataGridView2.Location = new System.Drawing.Point(-8, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 33;
-            this.dataGridView2.Size = new System.Drawing.Size(960, 928);
-            this.dataGridView2.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "productid";
-            this.dataGridViewTextBoxColumn1.HeaderText = "productid";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // sALESBindingSource4
-            // 
-            this.sALESBindingSource4.DataMember = "SALES";
-            this.sALESBindingSource4.DataSource = this.pcdbDataSetBindingSource;
-            // 
-            // pcdbDataSetBindingSource
-            // 
-            this.pcdbDataSetBindingSource.DataSource = this.pcdbDataSet;
-            this.pcdbDataSetBindingSource.Position = 0;
-            // 
-            // pcdbDataSet
-            // 
-            this.pcdbDataSet.DataSetName = "pcdbDataSet";
-            this.pcdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -183,48 +147,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(960, 928);
             this.dataGridView1.TabIndex = 1;
             // 
-            // productidDataGridViewTextBoxColumn
-            // 
-            this.productidDataGridViewTextBoxColumn.DataPropertyName = "productid";
-            this.productidDataGridViewTextBoxColumn.HeaderText = "productid";
-            this.productidDataGridViewTextBoxColumn.Name = "productidDataGridViewTextBoxColumn";
-            this.productidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pnameDataGridViewTextBoxColumn
-            // 
-            this.pnameDataGridViewTextBoxColumn.DataPropertyName = "pname";
-            this.pnameDataGridViewTextBoxColumn.HeaderText = "pname";
-            this.pnameDataGridViewTextBoxColumn.Name = "pnameDataGridViewTextBoxColumn";
-            // 
-            // pcostDataGridViewTextBoxColumn
-            // 
-            this.pcostDataGridViewTextBoxColumn.DataPropertyName = "pcost";
-            this.pcostDataGridViewTextBoxColumn.HeaderText = "pcost";
-            this.pcostDataGridViewTextBoxColumn.Name = "pcostDataGridViewTextBoxColumn";
-            // 
-            // pstockDataGridViewTextBoxColumn
-            // 
-            this.pstockDataGridViewTextBoxColumn.DataPropertyName = "pstock";
-            this.pstockDataGridViewTextBoxColumn.HeaderText = "pstock";
-            this.pstockDataGridViewTextBoxColumn.Name = "pstockDataGridViewTextBoxColumn";
-            // 
-            // pRODUCTSBindingSource
-            // 
-            this.pRODUCTSBindingSource.DataMember = "PRODUCTS";
-            this.pRODUCTSBindingSource.DataSource = this.pcdbDataSetBindingSource;
-            // 
             // productsTab
             // 
-            this.productsTab.Controls.Add(this.addButton);
             this.productsTab.Controls.Add(this.deleteButton);
             this.productsTab.Controls.Add(this.editButton);
-            this.productsTab.Controls.Add(this.txtStock);
+            this.productsTab.Controls.Add(this.productStockTextBox);
             this.productsTab.Controls.Add(this.productStockLabel);
-            this.productsTab.Controls.Add(this.txtCost);
+            this.productsTab.Controls.Add(this.productCostTextBox);
             this.productsTab.Controls.Add(this.productCostLabel);
-            this.productsTab.Controls.Add(this.txtName);
+            this.productsTab.Controls.Add(this.productNameTextBox);
             this.productsTab.Controls.Add(this.productNameLabel);
-            this.productsTab.Controls.Add(this.txtId);
+            this.productsTab.Controls.Add(this.productIdTextBox);
             this.productsTab.Controls.Add(this.productIdLabel);
             this.productsTab.Controls.Add(this.dataGridView);
             this.productsTab.Location = new System.Drawing.Point(8, 39);
@@ -265,14 +198,14 @@
             this.editButton.Text = "EDIT";
             this.editButton.UseVisualStyleBackColor = true;
             // 
-            // txtStock
+            // productStockTextBox
             // 
-            this.txtStock.AccessibleName = "productStock";
-            this.txtStock.Location = new System.Drawing.Point(322, 246);
-            this.txtStock.Multiline = true;
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(403, 37);
-            this.txtStock.TabIndex = 8;
+            this.productStockTextBox.AccessibleName = "productStock";
+            this.productStockTextBox.Location = new System.Drawing.Point(322, 246);
+            this.productStockTextBox.Multiline = true;
+            this.productStockTextBox.Name = "productStockTextBox";
+            this.productStockTextBox.Size = new System.Drawing.Size(403, 37);
+            this.productStockTextBox.TabIndex = 8;
             // 
             // productStockLabel
             // 
@@ -287,14 +220,14 @@
             this.productStockLabel.TabIndex = 7;
             this.productStockLabel.Text = "Stock";
             // 
-            // txtCost
+            // productCostTextBox
             // 
-            this.txtCost.AccessibleName = "productCost";
-            this.txtCost.Location = new System.Drawing.Point(322, 171);
-            this.txtCost.Multiline = true;
-            this.txtCost.Name = "txtCost";
-            this.txtCost.Size = new System.Drawing.Size(403, 37);
-            this.txtCost.TabIndex = 6;
+            this.productCostTextBox.AccessibleName = "productCost";
+            this.productCostTextBox.Location = new System.Drawing.Point(322, 171);
+            this.productCostTextBox.Multiline = true;
+            this.productCostTextBox.Name = "productCostTextBox";
+            this.productCostTextBox.Size = new System.Drawing.Size(403, 37);
+            this.productCostTextBox.TabIndex = 6;
             // 
             // productCostLabel
             // 
@@ -309,14 +242,14 @@
             this.productCostLabel.TabIndex = 5;
             this.productCostLabel.Text = "Cost";
             // 
-            // txtName
+            // productNameTextBox
             // 
-            this.txtName.AccessibleName = "productName";
-            this.txtName.Location = new System.Drawing.Point(322, 97);
-            this.txtName.Multiline = true;
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(403, 37);
-            this.txtName.TabIndex = 4;
+            this.productNameTextBox.AccessibleName = "productName";
+            this.productNameTextBox.Location = new System.Drawing.Point(322, 97);
+            this.productNameTextBox.Multiline = true;
+            this.productNameTextBox.Name = "productNameTextBox";
+            this.productNameTextBox.Size = new System.Drawing.Size(403, 37);
+            this.productNameTextBox.TabIndex = 4;
             // 
             // productNameLabel
             // 
@@ -331,14 +264,14 @@
             this.productNameLabel.TabIndex = 3;
             this.productNameLabel.Text = "Product Name";
             // 
-            // txtId
+            // productIdTextBox
             // 
-            this.txtId.AccessibleName = "productId";
-            this.txtId.Location = new System.Drawing.Point(322, 22);
-            this.txtId.Multiline = true;
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(403, 37);
-            this.txtId.TabIndex = 2;
+            this.productIdTextBox.AccessibleName = "productId";
+            this.productIdTextBox.Location = new System.Drawing.Point(322, 22);
+            this.productIdTextBox.Multiline = true;
+            this.productIdTextBox.Name = "productIdTextBox";
+            this.productIdTextBox.Size = new System.Drawing.Size(403, 37);
+            this.productIdTextBox.TabIndex = 2;
             // 
             // productIdLabel
             // 
@@ -370,47 +303,116 @@
             this.dataGridView.Size = new System.Drawing.Size(1073, 928);
             this.dataGridView.TabIndex = 0;
             // 
-            // productidDataGridViewTextBoxColumn2
+            // materialTabSelector1
             // 
-            this.productidDataGridViewTextBoxColumn2.DataPropertyName = "productid";
-            this.productidDataGridViewTextBoxColumn2.HeaderText = "productid";
-            this.productidDataGridViewTextBoxColumn2.Name = "productidDataGridViewTextBoxColumn2";
-            this.productidDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.materialTabSelector1.BaseTabControl = this.materialTabControl1;
+            this.materialTabSelector1.Depth = 0;
+            this.materialTabSelector1.Location = new System.Drawing.Point(0, 63);
+            this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialTabSelector1.Name = "materialTabSelector1";
+            this.materialTabSelector1.Size = new System.Drawing.Size(1920, 80);
+            this.materialTabSelector1.TabIndex = 1;
+            this.materialTabSelector1.Text = "materialTabSelector1";
             // 
-            // pnameDataGridViewTextBoxColumn1
+            // pcdbDataSet
             // 
-            this.pnameDataGridViewTextBoxColumn1.DataPropertyName = "pname";
-            this.pnameDataGridViewTextBoxColumn1.HeaderText = "pname";
-            this.pnameDataGridViewTextBoxColumn1.Name = "pnameDataGridViewTextBoxColumn1";
+            this.pcdbDataSet.DataSetName = "pcdbDataSet";
+            this.pcdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pcostDataGridViewTextBoxColumn1
+            // pcdbDataSetBindingSource
             // 
-            this.pcostDataGridViewTextBoxColumn1.DataPropertyName = "pcost";
-            this.pcostDataGridViewTextBoxColumn1.HeaderText = "pcost";
-            this.pcostDataGridViewTextBoxColumn1.Name = "pcostDataGridViewTextBoxColumn1";
+            this.pcdbDataSetBindingSource.DataSource = this.pcdbDataSet;
+            this.pcdbDataSetBindingSource.Position = 0;
             // 
-            // pstockDataGridViewTextBoxColumn1
+            // pRODUCTSBindingSource
             // 
-            this.pstockDataGridViewTextBoxColumn1.DataPropertyName = "pstock";
-            this.pstockDataGridViewTextBoxColumn1.HeaderText = "pstock";
-            this.pstockDataGridViewTextBoxColumn1.Name = "pstockDataGridViewTextBoxColumn1";
+            this.pRODUCTSBindingSource.DataMember = "PRODUCTS";
+            this.pRODUCTSBindingSource.DataSource = this.pcdbDataSetBindingSource;
             // 
-            // pRODUCTSBindingSource1
+            // pRODUCTSTableAdapter
             // 
-            this.pRODUCTSBindingSource1.DataMember = "PRODUCTS";
-            this.pRODUCTSBindingSource1.DataSource = this.pcdbDataSetBindingSource;
+            this.pRODUCTSTableAdapter.ClearBeforeFill = true;
+            // 
+            // productidDataGridViewTextBoxColumn
+            // 
+            this.productidDataGridViewTextBoxColumn.DataPropertyName = "productid";
+            this.productidDataGridViewTextBoxColumn.HeaderText = "productid";
+            this.productidDataGridViewTextBoxColumn.Name = "productidDataGridViewTextBoxColumn";
+            this.productidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pnameDataGridViewTextBoxColumn
+            // 
+            this.pnameDataGridViewTextBoxColumn.DataPropertyName = "pname";
+            this.pnameDataGridViewTextBoxColumn.HeaderText = "pname";
+            this.pnameDataGridViewTextBoxColumn.Name = "pnameDataGridViewTextBoxColumn";
+            // 
+            // pcostDataGridViewTextBoxColumn
+            // 
+            this.pcostDataGridViewTextBoxColumn.DataPropertyName = "pcost";
+            this.pcostDataGridViewTextBoxColumn.HeaderText = "pcost";
+            this.pcostDataGridViewTextBoxColumn.Name = "pcostDataGridViewTextBoxColumn";
+            // 
+            // pstockDataGridViewTextBoxColumn
+            // 
+            this.pstockDataGridViewTextBoxColumn.DataPropertyName = "pstock";
+            this.pstockDataGridViewTextBoxColumn.HeaderText = "pstock";
+            this.pstockDataGridViewTextBoxColumn.Name = "pstockDataGridViewTextBoxColumn";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.sALESBindingSource4;
+            this.dataGridView2.Location = new System.Drawing.Point(-8, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 33;
+            this.dataGridView2.Size = new System.Drawing.Size(960, 928);
+            this.dataGridView2.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "productid";
+            this.dataGridViewTextBoxColumn1.HeaderText = "productid";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // sALESBindingSource
+            // 
+            this.sALESBindingSource.DataMember = "SALES";
+            this.sALESBindingSource.DataSource = this.pcdbDataSetBindingSource;
+            // 
+            // sALESTableAdapter
+            // 
+            this.sALESTableAdapter.ClearBeforeFill = true;
+            // 
+            // sALESBindingSource1
+            // 
+            this.sALESBindingSource1.DataMember = "SALES";
+            this.sALESBindingSource1.DataSource = this.pcdbDataSet;
+            // 
+            // fKSALESproductid02084FDABindingSource
+            // 
+            this.fKSALESproductid02084FDABindingSource.DataMember = "FK__SALES__productid__02084FDA";
+            this.fKSALESproductid02084FDABindingSource.DataSource = this.pRODUCTSBindingSource;
+            // 
+            // sALESBindingSource2
+            // 
+            this.sALESBindingSource2.DataMember = "SALES";
+            this.sALESBindingSource2.DataSource = this.pcdbDataSetBindingSource;
             // 
             // salesTab
             // 
             this.salesTab.Controls.Add(this.materialRaisedButton1);
             this.salesTab.Controls.Add(this.materialRaisedButton2);
-            this.salesTab.Controls.Add(this.txtEarned);
-            this.salesTab.Controls.Add(this.salesEarnedLabel);
-            this.salesTab.Controls.Add(this.txtSold);
+            this.salesTab.Controls.Add(this.salePriceTextBox);
+            this.salesTab.Controls.Add(this.salePriceLabel);
+            this.salesTab.Controls.Add(this.quantitySoldTextBox);
             this.salesTab.Controls.Add(this.quantitySoldLabel);
             this.salesTab.Controls.Add(this.sProductIdTextBox);
             this.salesTab.Controls.Add(this.sProductIdLabel);
-            this.salesTab.Controls.Add(this.txtDate);
+            this.salesTab.Controls.Add(this.saleDateTextBox);
             this.salesTab.Controls.Add(this.saleDateLabel);
             this.salesTab.Controls.Add(this.saleIdTextBox);
             this.salesTab.Controls.Add(this.saleIdLabel);
@@ -453,36 +455,36 @@
             this.materialRaisedButton2.Text = "EDIT";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
             // 
-            // txtEarned
+            // salePriceTextBox
             // 
-            this.txtEarned.AccessibleName = "salePrice";
-            this.txtEarned.Location = new System.Drawing.Point(322, 319);
-            this.txtEarned.Multiline = true;
-            this.txtEarned.Name = "txtEarned";
-            this.txtEarned.Size = new System.Drawing.Size(403, 37);
-            this.txtEarned.TabIndex = 33;
+            this.salePriceTextBox.AccessibleName = "salePrice";
+            this.salePriceTextBox.Location = new System.Drawing.Point(322, 319);
+            this.salePriceTextBox.Multiline = true;
+            this.salePriceTextBox.Name = "salePriceTextBox";
+            this.salePriceTextBox.Size = new System.Drawing.Size(403, 37);
+            this.salePriceTextBox.TabIndex = 33;
             // 
-            // salesEarnedLabel
+            // salePriceLabel
             // 
-            this.salesEarnedLabel.AutoSize = true;
-            this.salesEarnedLabel.Depth = 0;
-            this.salesEarnedLabel.Font = new System.Drawing.Font("Roboto", 11F);
-            this.salesEarnedLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.salesEarnedLabel.Location = new System.Drawing.Point(6, 319);
-            this.salesEarnedLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.salesEarnedLabel.Name = "salesEarnedLabel";
-            this.salesEarnedLabel.Size = new System.Drawing.Size(189, 37);
-            this.salesEarnedLabel.TabIndex = 32;
-            this.salesEarnedLabel.Text = "Sales Earned";
+            this.salePriceLabel.AutoSize = true;
+            this.salePriceLabel.Depth = 0;
+            this.salePriceLabel.Font = new System.Drawing.Font("Roboto", 11F);
+            this.salePriceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.salePriceLabel.Location = new System.Drawing.Point(6, 319);
+            this.salePriceLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.salePriceLabel.Name = "salePriceLabel";
+            this.salePriceLabel.Size = new System.Drawing.Size(149, 37);
+            this.salePriceLabel.TabIndex = 32;
+            this.salePriceLabel.Text = "Sale Price";
             // 
-            // txtSold
+            // quantitySoldTextBox
             // 
-            this.txtSold.AccessibleName = "quantitySold";
-            this.txtSold.Location = new System.Drawing.Point(322, 245);
-            this.txtSold.Multiline = true;
-            this.txtSold.Name = "txtSold";
-            this.txtSold.Size = new System.Drawing.Size(403, 37);
-            this.txtSold.TabIndex = 31;
+            this.quantitySoldTextBox.AccessibleName = "quantitySold";
+            this.quantitySoldTextBox.Location = new System.Drawing.Point(322, 245);
+            this.quantitySoldTextBox.Multiline = true;
+            this.quantitySoldTextBox.Name = "quantitySoldTextBox";
+            this.quantitySoldTextBox.Size = new System.Drawing.Size(403, 37);
+            this.quantitySoldTextBox.TabIndex = 31;
             // 
             // quantitySoldLabel
             // 
@@ -510,23 +512,23 @@
             // 
             this.sProductIdLabel.AutoSize = true;
             this.sProductIdLabel.Depth = 0;
-            this.sProductIdLabel.Font = new System.Drawing.Font("Roboto", 11F);
+            this.sProductIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.sProductIdLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.sProductIdLabel.Location = new System.Drawing.Point(6, 170);
             this.sProductIdLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.sProductIdLabel.Name = "sProductIdLabel";
-            this.sProductIdLabel.Size = new System.Drawing.Size(158, 37);
+            this.sProductIdLabel.Size = new System.Drawing.Size(156, 36);
             this.sProductIdLabel.TabIndex = 28;
             this.sProductIdLabel.Text = "Product ID";
             // 
-            // txtDate
+            // saleDateTextBox
             // 
-            this.txtDate.AccessibleName = "saleDate";
-            this.txtDate.Location = new System.Drawing.Point(322, 96);
-            this.txtDate.Multiline = true;
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(403, 37);
-            this.txtDate.TabIndex = 27;
+            this.saleDateTextBox.AccessibleName = "saleDate";
+            this.saleDateTextBox.Location = new System.Drawing.Point(322, 96);
+            this.saleDateTextBox.Multiline = true;
+            this.saleDateTextBox.Name = "saleDateTextBox";
+            this.saleDateTextBox.Size = new System.Drawing.Size(403, 37);
+            this.saleDateTextBox.TabIndex = 27;
             // 
             // saleDateLabel
             // 
@@ -581,6 +583,11 @@
             this.dataGridView3.Size = new System.Drawing.Size(1073, 928);
             this.dataGridView3.TabIndex = 23;
             // 
+            // sALESBindingSource3
+            // 
+            this.sALESBindingSource3.DataMember = "SALES";
+            this.sALESBindingSource3.DataSource = this.pcdbDataSetBindingSource;
+            // 
             // saleidDataGridViewTextBoxColumn
             // 
             this.saleidDataGridViewTextBoxColumn.DataPropertyName = "saleid";
@@ -612,65 +619,40 @@
             this.salepriceDataGridViewTextBoxColumn.HeaderText = "saleprice";
             this.salepriceDataGridViewTextBoxColumn.Name = "salepriceDataGridViewTextBoxColumn";
             // 
-            // sALESBindingSource3
+            // pRODUCTSBindingSource1
             // 
-            this.sALESBindingSource3.DataMember = "SALES";
-            this.sALESBindingSource3.DataSource = this.pcdbDataSetBindingSource;
+            this.pRODUCTSBindingSource1.DataMember = "PRODUCTS";
+            this.pRODUCTSBindingSource1.DataSource = this.pcdbDataSetBindingSource;
             // 
-            // materialTabSelector1
+            // productidDataGridViewTextBoxColumn2
             // 
-            this.materialTabSelector1.BaseTabControl = this.materialTabControl1;
-            this.materialTabSelector1.Depth = 0;
-            this.materialTabSelector1.Location = new System.Drawing.Point(0, 63);
-            this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialTabSelector1.Name = "materialTabSelector1";
-            this.materialTabSelector1.Size = new System.Drawing.Size(1920, 80);
-            this.materialTabSelector1.TabIndex = 1;
-            this.materialTabSelector1.Text = "materialTabSelector1";
+            this.productidDataGridViewTextBoxColumn2.DataPropertyName = "productid";
+            this.productidDataGridViewTextBoxColumn2.HeaderText = "productid";
+            this.productidDataGridViewTextBoxColumn2.Name = "productidDataGridViewTextBoxColumn2";
+            this.productidDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // pRODUCTSTableAdapter
+            // pnameDataGridViewTextBoxColumn1
             // 
-            this.pRODUCTSTableAdapter.ClearBeforeFill = true;
+            this.pnameDataGridViewTextBoxColumn1.DataPropertyName = "pname";
+            this.pnameDataGridViewTextBoxColumn1.HeaderText = "pname";
+            this.pnameDataGridViewTextBoxColumn1.Name = "pnameDataGridViewTextBoxColumn1";
             // 
-            // sALESBindingSource
+            // pcostDataGridViewTextBoxColumn1
             // 
-            this.sALESBindingSource.DataMember = "SALES";
-            this.sALESBindingSource.DataSource = this.pcdbDataSetBindingSource;
+            this.pcostDataGridViewTextBoxColumn1.DataPropertyName = "pcost";
+            this.pcostDataGridViewTextBoxColumn1.HeaderText = "pcost";
+            this.pcostDataGridViewTextBoxColumn1.Name = "pcostDataGridViewTextBoxColumn1";
             // 
-            // sALESTableAdapter
+            // pstockDataGridViewTextBoxColumn1
             // 
-            this.sALESTableAdapter.ClearBeforeFill = true;
+            this.pstockDataGridViewTextBoxColumn1.DataPropertyName = "pstock";
+            this.pstockDataGridViewTextBoxColumn1.HeaderText = "pstock";
+            this.pstockDataGridViewTextBoxColumn1.Name = "pstockDataGridViewTextBoxColumn1";
             // 
-            // sALESBindingSource1
+            // sALESBindingSource4
             // 
-            this.sALESBindingSource1.DataMember = "SALES";
-            this.sALESBindingSource1.DataSource = this.pcdbDataSet;
-            // 
-            // fKSALESproductid02084FDABindingSource
-            // 
-            this.fKSALESproductid02084FDABindingSource.DataMember = "FK__SALES__productid__02084FDA";
-            this.fKSALESproductid02084FDABindingSource.DataSource = this.pRODUCTSBindingSource;
-            // 
-            // sALESBindingSource2
-            // 
-            this.sALESBindingSource2.DataMember = "SALES";
-            this.sALESBindingSource2.DataSource = this.pcdbDataSetBindingSource;
-            // 
-            // addButton
-            // 
-            this.addButton.AutoSize = true;
-            this.addButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.addButton.Depth = 0;
-            this.addButton.Icon = null;
-            this.addButton.Location = new System.Drawing.Point(349, 791);
-            this.addButton.MouseState = MaterialSkin.MouseState.HOVER;
-            this.addButton.Name = "addButton";
-            this.addButton.Primary = true;
-            this.addButton.Size = new System.Drawing.Size(80, 36);
-            this.addButton.TabIndex = 23;
-            this.addButton.Text = "Add";
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            this.sALESBindingSource4.DataMember = "SALES";
+            this.sALESBindingSource4.DataSource = this.pcdbDataSetBindingSource;
             // 
             // Form1
             // 
@@ -686,24 +668,24 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.materialTabControl1.ResumeLayout(false);
             this.viewTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcdbDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTSBindingSource)).EndInit();
             this.productsTab.ResumeLayout(false);
             this.productsTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTSBindingSource1)).EndInit();
-            this.salesTab.ResumeLayout(false);
-            this.salesTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcdbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcdbDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKSALESproductid02084FDABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource2)).EndInit();
+            this.salesTab.ResumeLayout(false);
+            this.salesTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTSBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -718,13 +700,13 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private MaterialSkin.Controls.MaterialRaisedButton deleteButton;
         private MaterialSkin.Controls.MaterialRaisedButton editButton;
-        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.TextBox productStockTextBox;
         private MaterialSkin.Controls.MaterialLabel productStockLabel;
-        private System.Windows.Forms.TextBox txtCost;
+        private System.Windows.Forms.TextBox productCostTextBox;
         private MaterialSkin.Controls.MaterialLabel productCostLabel;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox productNameTextBox;
         private MaterialSkin.Controls.MaterialLabel productNameLabel;
-        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox productIdTextBox;
         private MaterialSkin.Controls.MaterialLabel productIdLabel;
         private System.Windows.Forms.BindingSource pcdbDataSetBindingSource;
         private pcdbDataSet pcdbDataSet;
@@ -750,13 +732,13 @@
         private System.Windows.Forms.BindingSource pRODUCTSBindingSource1;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
-        private System.Windows.Forms.TextBox txtEarned;
-        private MaterialSkin.Controls.MaterialLabel salesEarnedLabel;
-        private System.Windows.Forms.TextBox txtSold;
+        private System.Windows.Forms.TextBox salePriceTextBox;
+        private MaterialSkin.Controls.MaterialLabel salePriceLabel;
+        private System.Windows.Forms.TextBox quantitySoldTextBox;
         private MaterialSkin.Controls.MaterialLabel quantitySoldLabel;
         private System.Windows.Forms.TextBox sProductIdTextBox;
         private MaterialSkin.Controls.MaterialLabel sProductIdLabel;
-        private System.Windows.Forms.TextBox txtDate;
+        private System.Windows.Forms.TextBox saleDateTextBox;
         private MaterialSkin.Controls.MaterialLabel saleDateLabel;
         private System.Windows.Forms.TextBox saleIdTextBox;
         private MaterialSkin.Controls.MaterialLabel saleIdLabel;
@@ -767,7 +749,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn qtysoldDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn salepriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource sALESBindingSource3;
-        private MaterialSkin.Controls.MaterialRaisedButton addButton;
     }
 }
 
