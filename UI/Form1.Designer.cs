@@ -691,15 +691,50 @@
         }
 
         #endregion
-
+        //Tab Controls
         private MaterialSkin.Controls.MaterialTabControl materialTabControl1;
         private System.Windows.Forms.TabPage viewTab;
         private System.Windows.Forms.TabPage productsTab;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
+        private System.Windows.Forms.TabPage salesTab;
+        //Gridviews
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pcostDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pstockDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productidDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pnameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pcostDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pstockDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saleidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saledateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productidDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qtysoldDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salepriceDataGridViewTextBoxColumn;
+        //Buttons
         private MaterialSkin.Controls.MaterialRaisedButton deleteButton;
         private MaterialSkin.Controls.MaterialRaisedButton editButton;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
+        //SQL
+        private System.Windows.Forms.BindingSource pcdbDataSetBindingSource;
+        private pcdbDataSet pcdbDataSet;
+        private System.Windows.Forms.BindingSource pRODUCTSBindingSource;
+        private pcdbDataSetTableAdapters.PRODUCTSTableAdapter pRODUCTSTableAdapter;
+        private System.Windows.Forms.BindingSource sALESBindingSource3;
+        private System.Windows.Forms.BindingSource sALESBindingSource;
+        private pcdbDataSetTableAdapters.SALESTableAdapter sALESTableAdapter;
+        private System.Windows.Forms.BindingSource sALESBindingSource2;
+        private System.Windows.Forms.BindingSource sALESBindingSource1;
+        private System.Windows.Forms.BindingSource fKSALESproductid02084FDABindingSource;
+        private System.Windows.Forms.BindingSource sALESBindingSource4;
+        private System.Windows.Forms.BindingSource pRODUCTSBindingSource1;
+        //Textboxes and Labels
         private System.Windows.Forms.TextBox productStockTextBox;
         private MaterialSkin.Controls.MaterialLabel productStockLabel;
         private System.Windows.Forms.TextBox productCostTextBox;
@@ -708,30 +743,6 @@
         private MaterialSkin.Controls.MaterialLabel productNameLabel;
         private System.Windows.Forms.TextBox productIdTextBox;
         private MaterialSkin.Controls.MaterialLabel productIdLabel;
-        private System.Windows.Forms.BindingSource pcdbDataSetBindingSource;
-        private pcdbDataSet pcdbDataSet;
-        private System.Windows.Forms.BindingSource pRODUCTSBindingSource;
-        private pcdbDataSetTableAdapters.PRODUCTSTableAdapter pRODUCTSTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pcostDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pstockDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.BindingSource sALESBindingSource;
-        private pcdbDataSetTableAdapters.SALESTableAdapter sALESTableAdapter;
-        private System.Windows.Forms.BindingSource sALESBindingSource2;
-        private System.Windows.Forms.BindingSource sALESBindingSource1;
-        private System.Windows.Forms.BindingSource fKSALESproductid02084FDABindingSource;
-        private System.Windows.Forms.TabPage salesTab;
-        private System.Windows.Forms.BindingSource sALESBindingSource4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productidDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pnameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pcostDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pstockDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.BindingSource pRODUCTSBindingSource1;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
         private System.Windows.Forms.TextBox salePriceTextBox;
         private MaterialSkin.Controls.MaterialLabel salePriceLabel;
         private System.Windows.Forms.TextBox quantitySoldTextBox;
@@ -742,13 +753,8 @@
         private MaterialSkin.Controls.MaterialLabel saleDateLabel;
         private System.Windows.Forms.TextBox saleIdTextBox;
         private MaterialSkin.Controls.MaterialLabel saleIdLabel;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn saleidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn saledateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productidDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qtysoldDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salepriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource sALESBindingSource3;
+
+
     }
 }
 
