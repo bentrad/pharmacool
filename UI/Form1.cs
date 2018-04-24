@@ -27,5 +27,10 @@ namespace PharmaCool
             this.pRODUCTSTableAdapter.Fill(this.pcdbDataSet.PRODUCTS);
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
