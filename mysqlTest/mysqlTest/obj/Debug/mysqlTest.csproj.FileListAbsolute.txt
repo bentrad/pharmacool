@@ -75,3 +75,6 @@ C:\Users\luke\Source\Repos\newRepo\mysqlTest\mysqlTest\obj\Debug\mysqlTest.cspro
 C:\Users\luke\Source\Repos\newRepo\mysqlTest\mysqlTest\obj\Debug\mysqlTest.exe
 C:\Users\luke\Source\Repos\newRepo\mysqlTest\mysqlTest\obj\Debug\mysqlTest.pdb
 C:\Users\luke\Source\Repos\newRepo\mysqlTest\mysqlTest\bin\Debug\MaterialSkin.dll
+C:\Users\Bradley\source\repos\pharmacool\mysqlTest\mysqlTest\bin\Debug\mysqlTest.exe.config
+C:\Users\Bradley\source\repos\pharmacool\mysqlTest\mysqlTest\obj\Debug\mysqlTest.exe
+C:\Users\Bradley\source\repos\pharmacool\mysqlTest\mysqlTest\obj\Debug\mysqlTest.pdb
