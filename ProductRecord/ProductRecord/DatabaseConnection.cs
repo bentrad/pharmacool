@@ -8,54 +8,55 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using MySql.Data.MySqlClient;
 
-namespace ProductRecord
+namespace Pharmacool
 {
-    class DatabaseConnection
+     public class DatabaseConnection
     {
         //Variables required for database connection
-        SqlConnectionStringBuilder builder;
-        SqlConnection connection;
-        SqlCommand cmd;
+        private SqlConnectionStringBuilder _builder;
+        private SqlConnection _connection;
+        private SqlCommand _cmd;
+        private string _tableName;
 
         //Constructor - declare appropriate variables
-        public DatabaseConnection(string database)
+        public DatabaseConnection(string database, string tableName)
         {
-            builder = new SqlConnectionStringBuilder();
-            builder.DataSource = "pharmacool.database.windows.net"; //ERROR:Server Name cannot be found
-            builder.UserID = "pharma@pharmacool";
-            builder.Password = "pineapplepizza1!";
-            builder.InitialCatalog = database;
-            connection = new SqlConnection(builder.ConnectionString);
+            _builder = new SqlConnectionStringBuilder();
+            _builder.DataSource = "pharmacool.database.windows.net"; //BRADLEY CHICK: DELETE THIS IF YOU DID NOT WRITE THIS: //ERROR:Server Name cannot be found
+            _builder.UserID = "pharma@pharmacool";
+            _builder.Password = "pineapplepizza1!";
+            _builder.InitialCatalog = database;     //Product database is 'pcdb'. Refer to portal.azure.com for more details
+            _tableName = tableName;
+            _connection = new SqlConnection(_builder.ConnectionString);
         }
 
         //Opens connection to the database
         public void OpenConnection()
         {
-            if (!(connection.State == ConnectionState.Open))
-            connection.Open();
+            if (!(_connection.State == ConnectionState.Open))
+            _connection.Open();
         }
 
         //Closes connection to the database
-        public void CloseConnection()
+        public void CloseConnectionAndLoad()
         {
-            if (connection.State == ConnectionState.Open)
+            if (_connection.State == ConnectionState.Open)
             {
-                connection.Close();
-                LoadData();
+                _connection.Close();
+                LoadData(_tableName);
             }
         }
 
         // Loads data to the database
-        private void LoadData()
+        public void LoadData(string tableName)
         {
-            connection.Open();
+            _connection.Open();
             try
             {
-                SqlCommand cmd = connection.CreateCommand();
-                cmd.CommandText = "SELECT * FROM PRODUCTS";
-                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                SqlCommand _cmd = _connection.CreateCommand();
+                _cmd.CommandText = "SELECT * FROM " +  tableName;
+                SqlDataAdapter adap = new SqlDataAdapter(_cmd);
                 DataSet ds = new DataSet();
                 adap.Fill(ds);
             }
@@ -65,38 +66,55 @@ namespace ProductRecord
             }
             finally
             {
-                if (connection.State == ConnectionState.Open)
+                if (_connection.State == ConnectionState.Open)
                 {
-                    connection.Close();
+                    _connection.Close();
                 }
             }
         }
 
-        //Remove row from databse
-        public virtual void Delete(string id, string tableName) {
+
+        public void ConnectionCommandStartUp()
+        {
             OpenConnection();
-
-            cmd = connection.CreateCommand();
-            cmd.CommandText = "DELETE FROM " + tableName + " WHERE productid = @productid";
-            cmd.Parameters.AddWithValue("@productid", int.Parse(id));
-
+            _cmd = _connection.CreateCommand();
+        }
+        //Remove row from databse
+        public virtual void Delete(string id)
+        {
+            ConnectionCommandStartUp();
             //Connection must be closed in child class
         }
 
         //Edit database row
-        public virtual void Edit(string[] value) {
-            OpenConnection();
-
+        public virtual void Edit(string[] values) {
+            ConnectionCommandStartUp();
             //Connection must be closed in child class
 
         }
 
         //Add row to database
-        public virtual void Create(string[] value) {
-            OpenConnection();
+        public virtual void Create(string[] values) {
+            ConnectionCommandStartUp();
+            //Connection must be closed in child class
+        }
 
-
-           //Connection must be closed in child class
+        protected SqlConnectionStringBuilder Builder{ 
+            get { return _builder; }
+            set { _builder = value; }
+        }
+        public SqlConnection Connection {
+            get { return _connection; }
+            set { _connection = value; }
+        }
+        public SqlCommand Command{
+            get { return _cmd; }
+            set { _cmd = value; }
+        }
+        public string TableName
+        {
+            get { return _tableName; }
+            set { _tableName = value; }
         }
     }
 }

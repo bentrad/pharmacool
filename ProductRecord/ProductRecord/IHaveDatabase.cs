@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 //using MySql.Data.MySqlClient;
 
-namespace ProductRecord
+namespace Pharamcool
 {
     interface IHaveDatabase
     {

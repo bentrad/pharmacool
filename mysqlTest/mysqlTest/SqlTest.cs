@@ -26,6 +26,7 @@ namespace mysqlTest
         }
 
 
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             int pStock;
@@ -62,7 +63,7 @@ namespace mysqlTest
 
                 //    connection.Open();
                 cmd = connection.CreateCommand();
-                cmd.CommandText = "INSERT INTO PRODUCTS(pname, pcost, pstock)VALUES(@pname, @pcost, @pstock)";
+                cmd.CommandText = "INSERT INTO(pname, pcost, pstock)VALUES(@pname, @pcost, @pstock)";
                 cmd.Parameters.AddWithValue("@productid", int.Parse(txtId.Text));
                 cmd.Parameters.AddWithValue("@pname", txtName.Text);
                 cmd.Parameters.AddWithValue("@pcost", pCost);
