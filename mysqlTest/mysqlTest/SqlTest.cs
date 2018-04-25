@@ -71,7 +71,7 @@ namespace mysqlTest
                 cmd.ExecuteNonQuery();
             }
             catch (Exception)
-            {
+            {f
                 throw;
             }
             finally
