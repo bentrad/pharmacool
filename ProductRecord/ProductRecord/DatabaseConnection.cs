@@ -23,7 +23,6 @@ namespace Pharmacool
         public DatabaseConnection(string database, string tableName)
         {
             _builder = new SqlConnectionStringBuilder();
-            _builder.DataSource = "pharmacool.database.windows.net"; //BRADLEY CHICK: DELETE THIS IF YOU DID NOT WRITE THIS: //ERROR:Server Name cannot be found
             _builder.UserID = "pharma@pharmacool";
             _builder.Password = "pineapplepizza1!";
             _builder.InitialCatalog = database;     //Product database is 'pcdb'. Refer to portal.azure.com for more details
@@ -69,6 +68,7 @@ namespace Pharmacool
             }
 
         }
+
         //Remove row from database
         public virtual void Delete(string id)
         {
@@ -153,8 +153,7 @@ namespace Pharmacool
             }
         }
 
-
-
+        // Opens Connection ot the database
         public void OpenConnection()
         {
             if (!(_connection.State == ConnectionState.Open))

@@ -9,12 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-/*
- * https://www.c-sharpcorner.com/UploadFile/9582c9/insert-update-delete-display-data-in-mysql-using-C-Sharp/
- * */
-
-
 namespace Pharmacool
 {
     public class ProdRecord : DatabaseConnection
@@ -27,7 +21,7 @@ namespace Pharmacool
         private double _cost;
 
         //----------------------Constructors--------------------
-
+ 
         public ProdRecord(string database, string tableName, int quantity, string name, string id, double cost) : base(database, tableName)
         {
             _quantity = quantity;
@@ -44,7 +38,6 @@ namespace Pharmacool
             _id = id;
             _cost = cost;
         }
-
 
 
         //-------------------Methods--------------------
@@ -75,6 +68,7 @@ namespace Pharmacool
             }
         }
 
+
         public override void Edit(string[] values) //may not need these parameters. String only needs to be 3 elements in size(Name, Quantity & Stock)
         {
             base.Edit(values);
@@ -97,12 +91,12 @@ namespace Pharmacool
         //Remove row from table
         public override void Delete(string id)
         {
-            base.Delete(id);
+            base.Delete(id); // Open Connection
 
             Command.CommandText = "DELETE FROM " + TableName + " WHERE productid = @productid";
             Command.Parameters.AddWithValue("@productid", int.Parse(id));
 
-            //Connection must be closed in child class
+            base.CloseConnectionAndLoad(); // Close Connection
         }
 
 
@@ -110,93 +104,6 @@ namespace Pharmacool
         {
             base.LoadData(TableName);
         }
-
-        //---------------ATTENTION: BRADLEY, please review old code ------------------------------------------
-        [Obsolete("Old code that has to be reviewed", true)]
-        public void CreateRecord()
-        {
-            //address path to database file
-            //string myConnection = "Add path here";
-
-            //Query to insert into database
-            string query = "insert into example.example(Quantity,Name,ID,Tags,Cost) values('"
-                + _quantity + "','" + _name + "','" + _id + "','" + _tags + "','" + _cost + "');";
-            /*
-        //Connection to mySQL
-        mySqlConnection myConn = new mySqlConnection(myConnection);
-
-        //Command class that handles query and connection object
-        MySqlCommand myCommand = new MySqlCommand(query, MyConn2);
-
-        MySqlDataReader MyReader;
-        myConn.Open();
-
-        //Query will be executed and data is saved to database
-        MyReader = myCommand.ExecuteReader(); 
-        while (MyReader.Read())
-        */
-        }
-        //Edit Record Method
-
-
-        //Removes a record
-        [Obsolete("Old code that has to be reviewed", true)]
-        public void RemoveRecord()
-        {
-            /*
-             string MyConnection2 = "datasource=localhost;port=3307;username=root;password=root";  
-            string Query = "delete from student.studentinfo where idStudentInfo='" + this.IdTextBox.Text + "';";  
-            MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);  
-            MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);  
-            MySqlDataReader MyReader2;  
-            MyConn2.Open();  
-             MyReader2 = MyCommand2.ExecuteReader();  
-             MessageBox.Show("Data Deleted");  
-             while (MyReader2.Read())  
-             {  
-             }  
-             MyConn2.Close(); 
-             * /}
-
-            //Edit record elements
-            /*
-            //This is my connection string i have assigned the database file address path
-            string MyConnection2 = "datasource=localhost;port=3307;username=root;password=root";  
-            //This is my update query in which i am taking input from the user through windows forms and update the record.  
-            string Query = "update student.studentinfo set idStudentInfo='" + this.IdTextBox.Text + "',Name='" + this.NameTextBox.Text + "',Father_Name='" + this.FnameTextBox.Text + "',Age='" + this.AgeTextBox.Text + "',Semester='" + this.SemesterTextBox.Text + "' where idStudentInfo='" + this.IdTextBox.Text + "';";  
-            //This is  MySqlConnection here i have created the object and pass my connection string.  
-            MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);  
-            MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);  
-            MySqlDataReader MyReader2;  
-            MyConn2.Open();  
-            MyReader2 = MyCommand2.ExecuteReader();  
-            MessageBox.Show("Data Updated");  
-            while (MyReader2.Read())
-            {  
-            }  
-            MyConn2.Close();//Connection closed here
-             */
-
-            /*
-
-            Display Data
-
-
-            string MyConnection2 = "datasource=localhost;port=3307;username=root;password=root";  
-            string Query = "delete from student.studentinfo where idStudentInfo='" + this.IdTextBox.Text + "';";  
-            MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);  
-            MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);  
-            MySqlDataReader MyReader2;  
-            MyConn2.Open();  
-             MyReader2 = MyCommand2.ExecuteReader();  
-             MessageBox.Show("Data Deleted");  
-             while (MyReader2.Read())  
-             {  
-             }  
-             MyConn2.Close(); 
-            */
-        }
-
 
         //--------------------Get Properties--------------------- 
         public int Quantity {
@@ -211,10 +118,12 @@ namespace Pharmacool
             get { return _id; }
         }
 
-        public List<string> Tags
+        /* Not Required ATM
+         * 
+         * public List<string> Tags
         {
             get{return _tags;}
-        }
+        }*/
 
         public double Cost { 
             get {return _cost;}
