@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace PharmaCool
 {
@@ -29,6 +30,58 @@ namespace PharmaCool
             // TODO: This line of code loads data into the 'pcdbDataSet.PRODUCTS' table. You can move, or remove it, as needed.
             this.pRODUCTSTableAdapter.Fill(this.pcdbDataSet.PRODUCTS);
 
+        }
+        
+        //Check if text box is empty
+        public bool isEmpty(TextBox txtBoxObject)
+        {
+            if (string.IsNullOrWhiteSpace(txtBoxObject.Text))
+            {
+                txtBoxObject.Focus();
+                errorProvider1.SetError(txtBoxObject, "Please fill in the blank");
+                return true;
+            }
+            errorProvider1.SetError(txtBoxObject, "");
+            return false;
+        }
+        
+        //Check if text box is numeric
+        public bool isNotNumeric(TextBox txtBoxObject)
+        {
+            int number = 0;
+            if (int.TryParse(txtBoxObject.Text, out number))
+            {
+                errorProvider2.SetError(txtBoxObject, "");
+                return false;
+            }
+            errorProvider2.SetError(txtBoxObject, "Please enter numbers only");
+            return true;
+        }
+
+        //Check if text box contains maximum 2 decimal points
+        public bool isDecimalNumber(TextBox txtBoxObject)
+        {
+            decimal number;
+
+            if (Decimal.TryParse(txtBoxObject.Text, out number))
+            {
+                errorProvider3.SetError(txtBoxObject, "");
+                return true;
+            }
+            errorProvider3.SetError(txtBoxObject, "Please enter a decimal number");
+            return false;
+        }
+
+        //Validate function for all text box controls
+        public bool isValidated(TextBox txtId, TextBox txtName, TextBox txtCost, TextBox txtStock)
+        {
+            if (isEmpty(txtId) || isEmpty(txtName) || isEmpty(txtCost) || isEmpty(txtStock))
+                return false;
+            else if (isNotNumeric(txtId) || isNotNumeric(txtStock))
+                return false;
+            else if (!isDecimalNumber(txtCost))
+                return false;
+            return true;
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -66,17 +119,20 @@ namespace PharmaCool
                 //    //MySqlConnection connection = new MySqlConnection(builder.ConnectionString);
 
                 //    connection.Open();
-                cmd = connection.CreateCommand();
-                cmd.CommandText = "INSERT INTO PRODUCTS(pname, pcost, pstock)VALUES(@pname, @pcost, @pstock)";
-                cmd.Parameters.AddWithValue("@productid", int.Parse(txtId.Text));
-                cmd.Parameters.AddWithValue("@pname", txtName.Text);
-                cmd.Parameters.AddWithValue("@pcost", pCost);
-                cmd.Parameters.AddWithValue("@pstock", pStock);
-                cmd.ExecuteNonQuery();
+                if (isValidated(txtId, txtName, txtCost, txtStock))
+                {
+                    cmd = connection.CreateCommand();
+                    cmd.CommandText = "INSERT INTO PRODUCTS(pname, pcost, pstock)VALUES(@pname, @pcost, @pstock)";
+                    cmd.Parameters.AddWithValue("@productid", int.Parse(txtId.Text));
+                    cmd.Parameters.AddWithValue("@pname", txtName.Text);
+                    cmd.Parameters.AddWithValue("@pcost", pCost);
+                    cmd.Parameters.AddWithValue("@pstock", pStock);
+                    cmd.ExecuteNonQuery();
+                }
             }
             catch (Exception)
             {
-                throw;
+                //throw;
             }
             finally
             {

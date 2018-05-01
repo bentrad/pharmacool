@@ -43,6 +43,7 @@
             this.pstockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRODUCTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsTab = new System.Windows.Forms.TabPage();
+            this.addButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.deleteButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.editButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtStock = new System.Windows.Forms.TextBox();
@@ -86,7 +87,9 @@
             this.sALESBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fKSALESproductid02084FDABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sALESBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.addButton = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.materialTabControl1.SuspendLayout();
             this.viewTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -105,6 +108,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKSALESproductid02084FDABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -234,6 +240,22 @@
             this.productsTab.TabIndex = 1;
             this.productsTab.Text = "PRODUCTS";
             this.productsTab.UseVisualStyleBackColor = true;
+            // 
+            // addButton
+            // 
+            this.addButton.AutoSize = true;
+            this.addButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.addButton.Depth = 0;
+            this.addButton.Icon = null;
+            this.addButton.Location = new System.Drawing.Point(349, 791);
+            this.addButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.addButton.Name = "addButton";
+            this.addButton.Primary = true;
+            this.addButton.Size = new System.Drawing.Size(80, 36);
+            this.addButton.TabIndex = 23;
+            this.addButton.Text = "Add";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // deleteButton
             // 
@@ -656,21 +678,17 @@
             this.sALESBindingSource2.DataMember = "SALES";
             this.sALESBindingSource2.DataSource = this.pcdbDataSetBindingSource;
             // 
-            // addButton
+            // errorProvider1
             // 
-            this.addButton.AutoSize = true;
-            this.addButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.addButton.Depth = 0;
-            this.addButton.Icon = null;
-            this.addButton.Location = new System.Drawing.Point(349, 791);
-            this.addButton.MouseState = MaterialSkin.MouseState.HOVER;
-            this.addButton.Name = "addButton";
-            this.addButton.Primary = true;
-            this.addButton.Size = new System.Drawing.Size(80, 36);
-            this.addButton.TabIndex = 23;
-            this.addButton.Text = "Add";
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
             // 
             // Form1
             // 
@@ -704,6 +722,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKSALESproductid02084FDABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -768,6 +789,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn salepriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource sALESBindingSource3;
         private MaterialSkin.Controls.MaterialRaisedButton addButton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
     }
 }
 
