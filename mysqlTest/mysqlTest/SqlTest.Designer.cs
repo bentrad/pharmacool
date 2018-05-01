@@ -58,7 +58,7 @@
             this.txtId.AccessibleName = "pId";
             this.txtId.Location = new System.Drawing.Point(77, 31);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 31);
+            this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 1;
             this.txtId.Text = "24";
             // 
@@ -67,7 +67,7 @@
             this.txtName.AccessibleName = "txtName";
             this.txtName.Location = new System.Drawing.Point(77, 57);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 31);
+            this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 2;
             this.txtName.Text = "orange";
             // 
@@ -76,7 +76,7 @@
             this.txtCost.AccessibleName = "pcost";
             this.txtCost.Location = new System.Drawing.Point(77, 83);
             this.txtCost.Name = "txtCost";
-            this.txtCost.Size = new System.Drawing.Size(100, 31);
+            this.txtCost.Size = new System.Drawing.Size(100, 20);
             this.txtCost.TabIndex = 3;
             this.txtCost.Text = "0.4";
             // 
@@ -85,7 +85,7 @@
             this.txtStock.AccessibleName = "pstock";
             this.txtStock.Location = new System.Drawing.Point(77, 113);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(100, 31);
+            this.txtStock.Size = new System.Drawing.Size(100, 20);
             this.txtStock.TabIndex = 4;
             this.txtStock.Text = "400";
             // 
@@ -94,7 +94,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 25);
+            this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Id";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
@@ -104,7 +104,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 25);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Name";
             // 
@@ -113,7 +113,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 25);
+            this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Cost";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -123,7 +123,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 116);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 25);
+            this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Stock";
             // 
@@ -132,10 +132,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(101, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(198, 25);
+            this.label5.Size = new System.Drawing.Size(99, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Product Information";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // dataGridView1
             // 
