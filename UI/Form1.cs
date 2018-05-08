@@ -171,5 +171,10 @@ namespace PharmaCool
                 }
             }
         }
+
+        private void pRODUCTSBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

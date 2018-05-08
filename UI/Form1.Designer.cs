@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.viewTab = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sALESBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.pcdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pcdbDataSet = new PharmaCool.pcdbDataSet();
@@ -90,9 +88,14 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialTabControl1.SuspendLayout();
             this.viewTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcdbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcdbDataSet)).BeginInit();
@@ -111,6 +114,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -128,7 +132,7 @@
             // 
             // viewTab
             // 
-            this.viewTab.Controls.Add(this.dataGridView2);
+            this.viewTab.Controls.Add(this.dataGridView4);
             this.viewTab.Controls.Add(this.dataGridView1);
             this.viewTab.Location = new System.Drawing.Point(8, 39);
             this.viewTab.Name = "viewTab";
@@ -137,26 +141,6 @@
             this.viewTab.TabIndex = 0;
             this.viewTab.Text = "VIEW";
             this.viewTab.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
-            this.dataGridView2.DataSource = this.sALESBindingSource4;
-            this.dataGridView2.Location = new System.Drawing.Point(-8, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 33;
-            this.dataGridView2.Size = new System.Drawing.Size(960, 928);
-            this.dataGridView2.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "productid";
-            this.dataGridViewTextBoxColumn1.HeaderText = "productid";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // sALESBindingSource4
             // 
@@ -218,6 +202,7 @@
             // 
             this.pRODUCTSBindingSource.DataMember = "PRODUCTS";
             this.pRODUCTSBindingSource.DataSource = this.pcdbDataSetBindingSource;
+            this.pRODUCTSBindingSource.CurrentChanged += new System.EventHandler(this.pRODUCTSBindingSource_CurrentChanged);
             // 
             // productsTab
             // 
@@ -690,6 +675,54 @@
             // 
             this.errorProvider3.ContainerControl = this;
             // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AutoGenerateColumns = false;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridView4.DataSource = this.sALESBindingSource3;
+            this.dataGridView4.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowTemplate.Height = 33;
+            this.dataGridView4.Size = new System.Drawing.Size(947, 928);
+            this.dataGridView4.TabIndex = 24;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "saleid";
+            this.dataGridViewTextBoxColumn2.HeaderText = "saleid";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "saledate";
+            this.dataGridViewTextBoxColumn3.HeaderText = "saledate";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "productid";
+            this.dataGridViewTextBoxColumn4.HeaderText = "productid";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "qtysold";
+            this.dataGridViewTextBoxColumn5.HeaderText = "qtysold";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "saleprice";
+            this.dataGridViewTextBoxColumn6.HeaderText = "saleprice";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -704,7 +737,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.materialTabControl1.ResumeLayout(false);
             this.viewTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sALESBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcdbDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcdbDataSet)).EndInit();
@@ -725,6 +757,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -755,8 +788,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pcostDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pstockDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource sALESBindingSource;
         private pcdbDataSetTableAdapters.SALESTableAdapter sALESTableAdapter;
         private System.Windows.Forms.BindingSource sALESBindingSource2;
@@ -792,6 +823,12 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }
 
