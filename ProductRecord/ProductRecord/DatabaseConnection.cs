@@ -8,54 +8,135 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using MySql.Data.MySqlClient;
 
-namespace ProductRecord
+namespace Pharmacool
 {
-    class DatabaseConnection
+     public class DatabaseConnection
     {
-        //Variables required for database connection
-        SqlConnectionStringBuilder builder;
-        SqlConnection connection;
-        SqlCommand cmd;
+        //----------------------Fields--------------------
+        private SqlConnectionStringBuilder _builder;
+        private SqlConnection _connection;
+        private SqlCommand _cmd;
+        private string _tableName;
 
-        //Constructor - declare appropriate variables
-        public DatabaseConnection(string database)
+        //----------------------Constructor/s--------------------
+        public DatabaseConnection(string database, string tableName)
         {
-            builder = new SqlConnectionStringBuilder();
-            builder.DataSource = "pharmacool.database.windows.net"; //ERROR:Server Name cannot be found
-            builder.UserID = "pharma@pharmacool";
-            builder.Password = "pineapplepizza1!";
-            builder.InitialCatalog = database;
-            connection = new SqlConnection(builder.ConnectionString);
+            _builder = new SqlConnectionStringBuilder();
+            _builder.UserID = "pharma@pharmacool";
+            _builder.Password = "pineapplepizza1!";
+            _builder.InitialCatalog = database;     //Product database is 'pcdb'. Refer to portal.azure.com for more details
+            _tableName = tableName;
+            _connection = new SqlConnection(_builder.ConnectionString);
         }
 
-        //Opens connection to the database
-        public void OpenConnection()
+
+
+        //----------------------Methods--------------------
+
+        //Add row to database
+        public virtual void Create(string[] values)
         {
-            if (!(connection.State == ConnectionState.Open))
-            connection.Open();
+            ConnectionCommandStartUp();
+            //Connection must be closed in child class
         }
 
-        //Closes connection to the database
-        public void CloseConnection()
+        //Edit database row
+        public virtual void Edit(string[] values)
         {
-            if (connection.State == ConnectionState.Open)
-            {
-                connection.Close();
-                LoadData();
-            }
-        }
-
-        // Loads data to the database
-        private void LoadData()
-        {
-            connection.Open();
+            ConnectionCommandStartUp();
             try
             {
-                SqlCommand cmd = connection.CreateCommand();
-                cmd.CommandText = "SELECT * FROM PRODUCTS";
-                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                Command = Connection.CreateCommand();
+                //Command.CommandText = "INSERT INTO("+ ", " + ", " + ", " + ", )VALUES(" + ;
+                Command.CommandText = "INSERT INTO(saledate, productid, qtysold, saleprice)VALUES(@saledate, @productid, @qtysold, @saleprice)";
+                /*
+                Command.Parameters.AddWithValue("@saledate", txtDate.Text);         // These 4 variables are from the frontend. 
+                Command.Parameters.AddWithValue("@saleprive", sPrice);              // We must add the front end to get this working
+                Command.Parameters.AddWithValue("@qtysold", sQtySold);
+                Command.Parameters.AddWithValue("@productid", int.Parse(txtId.Text));
+                //*/
+                Command.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                CloseConnectionAndLoad();
+            }
+
+        }
+
+        //Remove row from database
+        public virtual void Delete(string id)
+        {
+            ConnectionCommandStartUp();
+            //Connection must be closed in child class
+        }
+
+        //--------------TODO: Fix code so it can read all fields from Columns of selected table----------------------
+        public SqlCommand SQLCommandBuilder ()
+        {
+
+            //Read number of columns in table
+            //Put each column into an element of a string array(EXCLUDE ID!!!!)
+            //Assign each column the appropriate value/s from the UX
+            SqlCommand cmd;
+            DataTable schemaTable;
+            SqlDataReader myReader;
+
+            ConnectionCommandStartUp();
+
+            cmd = Connection.CreateCommand();
+            cmd.CommandText = "SELECT * FROM " + TableName; //TODO: Set SQL to get all Column Names
+            myReader = cmd.ExecuteReader(CommandBehavior.KeyInfo);
+            
+            //Retrieve column schema into Datatable
+            schemaTable = myReader.GetSchemaTable();
+
+            Console.WriteLine(schemaTable.Columns[0] + " = " +  schemaTable.Rows[0][schemaTable.Columns[0]].ToString());
+
+            foreach (DataRow myField in schemaTable.Rows)
+            {
+
+                //For each property of the field...
+                foreach (DataColumn myProperty in schemaTable.Columns)
+                {
+                    //Display the field name and value.
+                    Console.WriteLine(myProperty.ColumnName + " = " + myField[myProperty].ToString());
+                }
+                Console.WriteLine();
+
+                //Pause.
+                Console.ReadLine();
+            }
+
+            //Always close the DataReader and connection.
+            myReader.Close();
+            Connection.Close();
+
+
+            //Command.CommandText = "INSERT INTO(saledate, productid, qtysold, saleprice)VALUES(@saledate, @productid, @qtysold, @saleprice)";
+            //Command.Parameters.AddWithValue("@saledate", txtDate.Text);         // These 4 variables are from the frontend. 
+            //Command.Parameters.AddWithValue("@saleprive", sPrice);              // We must add the front end to get this working
+            //Command.Parameters.AddWithValue("@qtysold", sQtySold);
+            //Command.Parameters.AddWithValue("@productid", int.Parse(txtId.Text));
+
+            return cmd;
+        }
+
+
+        // Loads data to the database
+        public void LoadData(string tableName)
+        {
+            _connection.Open();
+            try
+            {
+                SqlCommand _cmd = _connection.CreateCommand();
+                _cmd.CommandText = "SELECT * FROM " + tableName;
+                SqlDataAdapter adap = new SqlDataAdapter(_cmd);
                 DataSet ds = new DataSet();
                 adap.Fill(ds);
             }
@@ -65,38 +146,53 @@ namespace ProductRecord
             }
             finally
             {
-                if (connection.State == ConnectionState.Open)
+                if (_connection.State == ConnectionState.Open)
                 {
-                    connection.Close();
+                    _connection.Close();
                 }
             }
         }
 
-        //Remove row from databse
-        public virtual void Delete(string id, string tableName) {
-            OpenConnection();
-
-            cmd = connection.CreateCommand();
-            cmd.CommandText = "DELETE FROM " + tableName + " WHERE productid = @productid";
-            cmd.Parameters.AddWithValue("@productid", int.Parse(id));
-
-            //Connection must be closed in child class
+        // Opens Connection ot the database
+        public void OpenConnection()
+        {
+            if (!(_connection.State == ConnectionState.Open))
+                _connection.Open();
         }
 
-        //Edit database row
-        public virtual void Edit(string[] value) {
-            OpenConnection();
-
-            //Connection must be closed in child class
-
+        //Closes connection to the database
+        public void CloseConnectionAndLoad()
+        {
+            if (_connection.State == ConnectionState.Open)
+            {
+                _connection.Close();
+                LoadData(_tableName);
+            }
         }
 
-        //Add row to database
-        public virtual void Create(string[] value) {
+        public void ConnectionCommandStartUp()
+        {
             OpenConnection();
+            _cmd = _connection.CreateCommand();
+        }
 
-
-           //Connection must be closed in child class
+        //----------------------Properties--------------------
+        protected SqlConnectionStringBuilder Builder{ 
+            get { return _builder; }
+            set { _builder = value; }
+        }
+        public SqlConnection Connection {
+            get { return _connection; }
+            set { _connection = value; }
+        }
+        public SqlCommand Command{
+            get { return _cmd; }
+            set { _cmd = value; }
+        }
+        public string TableName
+        {
+            get { return _tableName; }
+            set { _tableName = value; }
         }
     }
 }

@@ -1,0 +1,15 @@
+Basic outline for Git best practices:
+  •	Committing Work:
+    o	Related Changes: A commit should only have changes that are related to the project. No nonsense.
+    o	Each of the team member should commit after a sprint day has been completed, if any significant progress has been made.
+    o	Commit your work after you are done, don’t save it for later.
+    o	Don’t commit half-done work: which mean don’t commit as a whole or commit every single changes just because it will make you look contributing. You should commit code when it’s completed and meaningful. When there are meaningful changes which are related, they should be putted into a single commit.
+  •	Commit Message:
+    o	Meaningful commit messages: a short description/summary of your changes are recommended
+  •	Keep a backup of your recent works within 1 – 2 commits
+  •	Merging:
+    o	Don’t merge branches with each other. Only merge with the master to avoid merge conflicts.
+    o	If a merge conflict occurs, undo/cancel the merge to bring it back to the state it was in previously. If errors persist, call the team for help.
+
+GitHub Commands Cheat Sheet - A great sources for quick refer to github commands:
+https://education.github.com/git-cheat-sheet-education.pdf
